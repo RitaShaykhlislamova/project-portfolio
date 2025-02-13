@@ -54,3 +54,7 @@ btnDarkMode.onclick = function () {
         localStorage.setItem("darkMode", "light");
     }
 };
+const darkModeBtn = document.querySelector('.dark-mode-btn');
+darkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+});
