@@ -58,3 +58,58 @@ const darkModeBtn = document.querySelector('.dark-mode-btn');
 darkModeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
 });
+const projects = [
+    {
+      title: "Designer",
+      description: "Creative design project",
+      img: "./img/designer.jpg",
+      link: "https://ritashaykhlislamova.github.io/designer/",
+    },
+    {
+      title: "Simple Starter",
+      description: "Basic project setup",
+      img: "./img/simple-starter.jpg",
+      link: "https://ritashaykhlislamova.github.io/simple-starter-main/",
+    },
+    {
+      title: "Robot",
+      description: "Fun AI project",
+      img: "./img/robot.jpg",
+      link: "https://ritashaykhlislamova.github.io/robot/",
+    },
+    {
+      title: "Recipe",
+      description: "Recipe sharing website",
+      img: "./img/recipe.jpg",
+      link: "https://ritashaykhlislamova.github.io/recipe/",
+    },
+    {
+      title: "Test 1",
+      description: "Testing new ideas",
+      img: "./img/test-1.jpg",
+      link: "https://ritashaykhlislamova.github.io/test-1/",
+    },
+    {
+      title: "Travel HTML Project",
+      description: "Travel website using HTML, CSS, and JS",
+      img: "./img/travel.jpg",
+      link: "https://ritashaykhlislamova.github.io/travel-html-project/",
+    }
+  ];
+  
+  const projectList = document.getElementById("projects-list");
+  
+  projects.forEach(project => {
+    const li = document.createElement("li");
+    li.classList.add("project");
+  
+    li.innerHTML = `
+      <a href="${project.link}" target="_blank">
+        <img src="${project.img}" alt="${project.title}" class="project__img">
+        <h3 class="project__title">${project.title}</h3>
+      </a>
+    `;
+  
+    projectList.appendChild(li);
+  });
+  
